@@ -2,6 +2,8 @@
 
 This Prometheus exporter connects to Skoda cloud services to receive vehicle metrics.
 
+![build](https://github.com/chr4/enyaq_exporter/workflows/build/badge.svg)
+
 It's currently retrieving the following values:
 
 - Eletric vehicle range
