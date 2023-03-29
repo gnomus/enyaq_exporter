@@ -84,7 +84,7 @@ func main() {
 				ts, err := service.TokenRefreshServiceTokenSource(logHandler, skoda.TRSParams, connect.AuthParams, *username, *password)
 				if err != nil {
 					log.Print(err)
-					return
+					continue
 				}
 
 				api := skoda.NewAPI(logHandler, ts)
