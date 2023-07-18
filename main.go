@@ -20,7 +20,7 @@ import (
 )
 
 func init() {
-	promVersion.Version = "0.1.0"
+	promVersion.Version = "0.1.1"
 	prometheus.MustRegister(promVersion.NewCollector("enyaq_exporter"))
 }
 
@@ -83,7 +83,9 @@ func main() {
 			if err == nil {
 				ts, err := service.TokenRefreshServiceTokenSource(logHandler, skoda.TRSParams, connect.AuthParams, *username, *password)
 				if err != nil {
-					log.Print(err)
+					log.Print("TokenRefresh error: ", err)
+					time.Sleep(time.Duration(*pollInterval) * time.Second)
+
 					continue
 				}
 

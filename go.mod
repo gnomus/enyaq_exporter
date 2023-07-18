@@ -3,7 +3,7 @@ module enyaq_exporter
 go 1.20
 
 require (
-	github.com/evcc-io/evcc v0.0.0-20230717194608-0493978874ef
+	github.com/evcc-io/evcc v0.0.0-20230718141539-b0d2c2f2d1c8
 	github.com/prometheus/client_golang v1.16.0
 	github.com/prometheus/common v0.44.0
 )
