@@ -12,6 +12,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	promVersion "github.com/prometheus/common/version"
+	"github.com/prometheus/client_golang/prometheus/collectors/version"
 
 	"github.com/evcc-io/evcc/util"
 	"github.com/evcc-io/evcc/vehicle/skoda"
@@ -21,7 +22,7 @@ import (
 
 func init() {
 	promVersion.Version = "0.1.2"
-	prometheus.MustRegister(promVersion.NewCollector("enyaq_exporter"))
+	prometheus.MustRegister(version.NewCollector("enyaq_exporter"))
 }
 
 func main() {
